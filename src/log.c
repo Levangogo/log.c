@@ -25,10 +25,10 @@
 #define MAX_CALLBACKS 32
 
 typedef struct {
-  log_LogFn fn;
+  log_LogFn fn;//函数指针 另一个是LockFn
   void *udata;
   int level;
-} Callback;
+} Callback;//自定义一种数据结构 Callback
 
 static struct {
   void *udata;
